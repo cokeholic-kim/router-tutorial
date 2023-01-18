@@ -7,6 +7,7 @@ import Header from './components/Header';
 import About from './pages/About';
 import Subpages from './pages/Subpages';
 import Subpage from './pages/Subpage';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/subpages' element={<Subpages/>}>
           <Route path='/subpages/:id' element={<Subpage/>}/>
         </Route>
+        <Route path="*" element={<NotFound/>}/>
         {/* <Route path='/product/:productname(파라미터로 전달받을 키가된다.) element={<Product></Product>}/> */}
       </Routes>
     </div>
